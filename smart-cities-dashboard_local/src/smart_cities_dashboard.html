@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and linked resources -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Cities Dashboard</title>
+    
+    <!-- External stylesheet for custom styles -->
+    <link rel="stylesheet" href="styleSmart.css">
+    
+    <!-- Chart.js library for charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    
+    <!-- Google Charts and Maps libraries -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnQamXB62tKCI-TinmKApyzFEHZZUpGTI"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar for displaying top issues -->
+        <div class="top-issues">
+          <div class="top-issues-header">
+            <h3>Top Issues</h3>
+            <!-- Options button for additional functionality -->
+            <div class="options">⋮</div>
+          </div>
+          <div class="search-bar">
+            <!-- Search bar for filtering issues -->
+            <input type="text" placeholder="Search">
+            <span>⌘ F</span>
+          </div>
+          <div class="issue-list">
+            <!-- Example of individual issue items -->
+            <!-- Each issue includes a label, severity level, and score -->
+            <div class="issue-item">
+              <div class="issue-info">
+                <span>Potholes</span>
+                <span class="severity medium">Severity: Medium</span>
+              </div>
+              <div class="issue-score">
+                <span>100</span>
+                <span class="dropdown-icon">▾</span>
+              </div>
+            </div>
+            <!-- Repeat issue-item structure for other issues -->
+            <div class="add-category">+ Add new category</div>
+          </div>
+        </div>
+
+        <!-- Main content area -->
+        <div class="content">
+            <h2 style="text-align: center;">Smart Cities Dashboard</h2>
+            
+            <!-- Map container -->
+            <div id="map"></div>
+            
+            <!-- Chart container -->
+            <div class="chart-container">
+                <canvas id="complaintsChart"></canvas>
+                <!-- Scripts for rendering the chart -->
+                <script src="https://www.gstatic.com/charts/loader.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+            </div>
+        </div>
+
+        <!-- Right-hand panel for quick stats -->
+        <div class="cards-container">
+          <!-- Card 1: Complaints Today -->
+          <div class="card">
+            <h4>Complaints Today</h4>
+            <div class="content">
+              <span>100</span>
+              <div class="icon">⚠️</div>
+            </div>
+            <a href="#">Click to view →</a>
+          </div>
+          
+          <!-- Card 2: Resolved Complaints -->
+          <div class="card">
+            <h4>Resolved Complaints</h4>
+            <div class="content">
+              <span>100</span>
+              <div class="icon green">✔️</div>
+            </div>
+            <a href="#">Click to view →</a>
+          </div>
+          
+          <!-- Card 3: Pending Complaints -->
+          <div class="card">
+            <h4>Pending Complaints</h4>
+            <div class="content">
+              <span>55</span>
+              <div class="icon gray">➖</div>
+            </div>
+            <a href="#">Click to view →</a>
+          </div>
+          
+          <!-- Card 4: My Complaints -->
+          <div class="card">
+            <h4>My Complaints</h4>
+            <div class="content">
+              <span>12</span>
+              <div class="icon blue">👤</div>
+            </div>
+            <a href="#">Click to view →</a>
+          </div>
+        </div>
+    </div>
+
+    <!-- Embedded spreadsheet container -->
+    <div class="spreadsheet-container">
+        <!-- Google Sheets iframe for real-time data display -->
+        <iframe src="https://docs.google.com/spreadsheets/d/1UvSq9wRiA2F6GlUyKUQivM-ihpSUL-iJsTrQoxjSX1M/htmlembed?single=true&gid=2012347942&range=A1:B10&widget=false&chrome=false"></iframe>
+    </div>
+
+    <!-- External JavaScript file for additional functionalities -->
+    <script src="smartCities.js"></script>
+</body>
+</html>

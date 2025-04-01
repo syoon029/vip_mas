@@ -1,0 +1,248 @@
+/* Reset and basic styles */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    font-family: Arial, sans-serif; /* Set default font for all elements */
+}
+
+body {
+    background-color: #f5f7fa; /* Light gray background for the page */
+    color: #333; /* Default text color */
+    padding: 20px; /* Add padding around the page content */
+}
+
+/* Dashboard layout */
+.dashboard {
+    display: grid; /* Use CSS Grid layout */
+    grid-template-columns: 1fr 3fr 1fr; /* Three columns with relative widths */
+    gap: 20px; /* Spacing between grid items */
+}
+
+/* Card styles */
+.card {
+    background: #fff; /* White background for cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    padding: 10px; /* Internal spacing */
+}
+
+/* Top issues container */
+.top-issues {
+    width: 400px; /* Fixed width */
+    height: auto; /* Flexible height */
+    background: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px; /* Internal spacing */
+}
+
+/* Top issues header */
+.top-issues-header {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between title and options */
+    align-items: center; /* Center-align items vertically */
+    margin-bottom: 20px; /* Spacing below the header */
+}
+
+.top-issues-header h3 {
+    font-size: 16px; /* Font size for the header */
+    font-weight: bold; /* Bold text */
+}
+
+.top-issues-header .options {
+    font-size: 18px; /* Font size for options icon */
+    color: #aaa; /* Light gray color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Search bar styles */
+.search-bar {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center-align items vertically */
+    background: #f9f9f9; /* Light gray background */
+    padding: 8px 12px; /* Internal spacing */
+    border-radius: 4px; /* Rounded corners */
+    margin-bottom: 20px; /* Spacing below the search bar */
+}
+
+.search-bar input {
+    border: none; /* Remove border */
+    background: none; /* Transparent background */
+    outline: none; /* Remove focus outline */
+    flex: 1; /* Take up remaining space */
+    font-size: 14px; /* Font size */
+}
+
+.search-bar span {
+    font-size: 14px; /* Font size for placeholder text */
+    color: #aaa; /* Light gray color */
+}
+
+/* Issue list container */
+.issue-list {
+    max-height: 800px; /* Set a maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Individual issue item */
+.issue-item {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between issue info and score */
+    align-items: center; /* Center-align items vertically */
+    padding: 10px 10px; /* Internal spacing */
+    border-bottom: 1px solid #f0f0f0; /* Divider between items */
+}
+
+.issue-item:last-child {
+    border-bottom: none; /* Remove border for the last item */
+}
+
+/* Issue information section */
+.issue-info {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack text vertically */
+}
+
+.issue-info span {
+    font-size: 14px; /* Font size for issue details */
+}
+
+/* Severity styles */
+.severity {
+    font-size: 12px; /* Font size for severity text */
+    color: #d9534f; /* Default color: Red for severe */
+}
+
+.severity.medium {
+    color: #f0ad4e; /* Orange for medium severity */
+}
+
+.severity.low {
+    color: #5cb85c; /* Green for low severity */
+}
+
+/* Issue score section */
+.issue-score {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center-align items vertically */
+    gap: 8px; /* Spacing between elements */
+}
+
+.issue-score span {
+    font-size: 12px; /* Font size for score text */
+    color: #bbb; /* Light gray color */
+}
+
+/* Dropdown icon */
+.dropdown-icon {
+    font-size: 12px; /* Font size */
+    color: #aaa; /* Light gray color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Add category button */
+.add-category {
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center-align horizontally */
+    align-items: center; /* Center-align vertically */
+    padding: 10px 0; /* Internal spacing */
+    background: #6c63ff; /* Purple background */
+    color: #fff; /* White text */
+    border-radius: 6px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    margin-top: 20px; /* Spacing above the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center-align text */
+}
+
+.add-category:hover {
+    background: #5348d9; /* Darker purple on hover */
+}
+
+/* Cards container */
+.cards-container {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack cards vertically */
+    gap: 25px; /* Spacing between cards */
+    margin-top: 150px; /* Large spacing above the container */
+}
+
+.card {
+    background: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 15px 20px; /* Internal spacing */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack content vertically */
+    gap: 10px; /* Spacing between content */
+    width: 250px; /* Fixed width for cards */
+}
+
+.card h4 {
+    font-size: 16px; /* Font size for card title */
+    color: #333; /* Default text color */
+    font-weight: 600; /* Semi-bold font weight */
+}
+
+.card .content {
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center-align items vertically */
+    justify-content: space-between; /* Space between content elements */
+}
+
+.card .content span {
+    font-size: 20px; /* Font size for numeric content */
+    font-weight: bold; /* Bold text */
+}
+
+/* Card icons */
+.card .icon {
+    font-size: 24px; /* Font size for icons */
+    color: #d9534f; /* Default red color */
+}
+
+.card .icon.green {
+    color: #5cb85c; /* Green for positive icons */
+}
+
+.card .icon.blue {
+    color: #007bff; /* Blue for neutral icons */
+}
+
+.card .icon.gray {
+    color: #6c757d; /* Gray for inactive icons */
+}
+
+.card a {
+    text-decoration: none; /* Remove underline from links */
+    font-size: 14px; /* Font size for link text */
+    color: #888; /* Gray color */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center-align items vertically */
+    gap: 5px; /* Spacing between text and icon */
+}
+
+.card a:hover {
+    color: #333; /* Darker color on hover */
+}
+
+/* Spreadsheet container */
+.spreadsheet-container iframe {
+    width: 100%; /* Full width */
+    height: 400px; /* Fixed height */
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+/* Map styles */
+#map {
+    height: 40vh; /* Set map height to 40% of viewport height */
+    width: 100%; /* Full width */
+    margin: auto; /* Center the map horizontally */
+}
+
+.spreadsheet-container iframe {
+    width: 100%; /* Full width */
+    height: 400px; /* Fixed height */
+    border: 1px solid #ddd; /* Light gray border */
+}
